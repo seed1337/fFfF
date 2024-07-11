@@ -258,7 +258,7 @@ install_vpn_pkgs() {
   [ "$os_ver" = "trixiesid" ] && p1=libcurl4-gnutls-dev
   (
     set -x
-    apt-get -yqq install libnss3-dev libnspr4-dev pkg-config \
+    apt-get --fix-missing -yqq install libnss3-dev libnspr4-dev pkg-config \
       libpam0g-dev libcap-ng-dev libcap-ng-utils libselinux1-dev \
       $p1 flex bison gcc make libnss3-tools \
       libevent-dev libsystemd-dev uuid-runtime ppp xl2tpd >/dev/null
